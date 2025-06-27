@@ -43,8 +43,7 @@ task-management-api/
     ├── services/
     │   └── task_service.go              # Business logic layer
     ├── handlers/
-    │   ├── task_handler.go              # HTTP handlers for tasks
-    │   └── health_handler.go            # Health check handler
+    │   └── task_handler.go              # HTTP handlers for tasks
     └── middleware/
         ├── cors.go                      # CORS middleware
         ├── logger.go                    # Request logging middleware
@@ -83,23 +82,12 @@ task-management-api/
    [GIN] Listening and serving HTTP on :8080
    ```
 
-5. **Test the health endpoint**
-   ```bash
-   curl http://localhost:8080/health
-   ```
-
 ## API Endpoints
 
 ### Base URL
 ```
 http://localhost:8080/api/v1
 ```
-
-### Health Check
-```
-GET /health
-```
-Returns server health status.
 
 ### 1. Create Task
 
