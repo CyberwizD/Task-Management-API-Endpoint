@@ -6,7 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func setupRoutes(router *gin.Engine, taskHandler *handlers.TaskHandler) {
+func SetupRoutes(router *gin.Engine, taskHandler *handlers.TaskHandler) {
 	// Health check
 	router.GET("/health", handlers.HealthCheck)
 
