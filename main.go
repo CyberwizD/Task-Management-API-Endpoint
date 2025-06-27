@@ -1,6 +1,8 @@
 package main
 
 import (
+	"log"
+
 	"github.com/CyberwizD/Task-Management-API-Endpoint/internal/api"
 	"github.com/CyberwizD/Task-Management-API-Endpoint/internal/config"
 	"github.com/CyberwizD/Task-Management-API-Endpoint/internal/handlers"
@@ -37,4 +39,10 @@ func main() {
 
 	// Setup routes
 	api.SetupRoutes(router, taskHandler)
+
+	// Start server
+	log.Printf("Starting server on port %s", cfg.Port)
+	if err := router.Run(":" + cfg.Port); err != nil {
+		log.Fatal("Failed to start server:", err)
+	}
 }
