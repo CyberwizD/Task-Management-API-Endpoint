@@ -7,9 +7,6 @@ import (
 )
 
 func SetupRoutes(router *gin.Engine, taskHandler *handlers.TaskHandler) {
-	// Health check
-	router.GET("/health", handlers.HealthCheck)
-
 	// API v1 routes
 	v1 := router.Group("/api/v1")
 	{
