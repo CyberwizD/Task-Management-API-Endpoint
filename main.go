@@ -14,4 +14,10 @@ import (
 func main() {
 	// Load configuration
 	cfg := config.Load()
+
+	// Set Gin mode
+	gin.SetMode(cfg.GinMode)
+
+	// Initialize repository
+	taskrepo := repository.NewInMemoryTaskRepository()
 }
